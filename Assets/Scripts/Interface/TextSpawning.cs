@@ -9,6 +9,7 @@ public class TextSpawning : MonoBehaviour
     Text _text;
     TMP_Text _tmProtext;
     string writer;
+    bool skip;
 
     [SerializeField] float atraso = 0f;
     [SerializeField] float tempoEntre = 0.1f;
@@ -43,7 +44,13 @@ public class TextSpawning : MonoBehaviour
         yield return new WaitForSeconds(atraso);
 
         foreach(char c in writer)
-        {
+        {   
+            if(skip)
+            {
+                _text.text = writer + iconComeco;
+                break;
+            }
+
             if(_text.text.Length > 0)
             {
                 _text.text = _text.text.Substring(0, _text.text.Length - iconComeco.Length);
@@ -62,9 +69,14 @@ public class TextSpawning : MonoBehaviour
     {
         _tmProtext.text = iconComecoAntesComeco ? iconComeco : "";
         yield return new WaitForSeconds(atraso);
-
+        
         foreach (char c in writer)
         {
+            if(skip)
+            {
+                _tmProtext.text = writer + iconComeco;
+                break;
+            }
             if(_tmProtext.text.Length > 0)
             {
                 _tmProtext.text = _tmProtext.text.Substring(0, _tmProtext.text.Length - iconComeco.Length);
@@ -78,5 +90,10 @@ public class TextSpawning : MonoBehaviour
         {
             _tmProtext.text = _tmProtext.text.Substring(0, _tmProtext.text.Length - iconComeco.Length);
         }
+    }
+
+    public void TerminarTexto()
+    {
+        skip = true;
     }
 }

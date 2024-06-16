@@ -4,22 +4,39 @@ using UnityEngine;
 
 public class Interaction : MonoBehaviour
 {
-    public Transform player;
-    public Transform npc;
+    public GameObject interfaceObject;
+
+    private GameObject player;
+
     void Start()
     {
-        
+        player = GameObject.FindGameObjectWithTag("Player");
+        if (interfaceObject != null)
+        {
+            interfaceObject.SetActive(false);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    void OnTriggerEnter2D(Collider2D other)
     {
-        float distance = Vector2.Distance(player.position, npc.position);   
-
-        if(distance <= 2 && Input.GetKeyDown("e"))
+        if (other.gameObject == player)
         {
-            //Pode adicionar o sistema de diálogo aqui 
-            Debug.Log("Conversa");
+            if (interfaceObject != null)
+            {
+                Debug.Log("Entrou");
+                interfaceObject.SetActive(true);
+            }
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject == player)
+        {
+            if (interfaceObject != null)
+            {
+                interfaceObject.SetActive(false);
+            }
         }
     }
 }
