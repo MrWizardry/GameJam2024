@@ -5,8 +5,9 @@ using UnityEngine;
 public class Interaction : MonoBehaviour
 {
     public GameObject interfaceObject;
-
+    public GameObject uiConv;
     private GameObject player;
+    private bool isPlayerInTrigger = false; 
 
     void Start()
     {
@@ -14,6 +15,22 @@ public class Interaction : MonoBehaviour
         if (interfaceObject != null)
         {
             interfaceObject.SetActive(false);
+        }
+        if (uiConv != null)
+        {
+            uiConv.SetActive(false); 
+        }
+    }
+
+    void Update()
+    {
+
+        if (isPlayerInTrigger && Input.GetKeyDown(KeyCode.E))
+        {
+            if (uiConv != null)
+            {
+                uiConv.SetActive(true);
+            }
         }
     }
 
@@ -23,9 +40,9 @@ public class Interaction : MonoBehaviour
         {
             if (interfaceObject != null)
             {
-                Debug.Log("Entrou");
                 interfaceObject.SetActive(true);
             }
+            isPlayerInTrigger = true; 
         }
     }
 
@@ -37,6 +54,7 @@ public class Interaction : MonoBehaviour
             {
                 interfaceObject.SetActive(false);
             }
+            isPlayerInTrigger = false; 
         }
     }
 }

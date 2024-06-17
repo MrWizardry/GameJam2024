@@ -378,7 +378,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &131182922
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -392,6 +392,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interfaceObject: {fileID: 70457473}
+  uiConv: {fileID: 0}
 --- !u!58 &131182923
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -677,7 +678,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -2.9801848}
+  m_AnchoredPosition: {x: 0, y: -3.1}
   m_SizeDelta: {x: 1621.8, y: 242.59}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &386527414
@@ -699,7 +700,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -793,7 +794,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!50 &708373921
 Rigidbody2D:
   serializedVersion: 4
@@ -1022,11 +1023,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Mussum Ipsum, cacilds vidis litro abertis. In elementis m\xE9 pra quem
-    \xE9 amistosis quis leo. Todo mundo v\xEA os porris que eu tomo, mas ningu\xE9m
-    v\xEA os tombis que eu levo! Nullam volutpat risus nec leo commodo, ut interdum
-    diam laoreet. Sed non consequat odio. Neg\xE3o \xE9 teu passadis, eu sou faxa
-    pretis."
+  m_text: "Neg\xE3o \xE9 teu passadis, eu sou faxa pretis. Praesent malesuada urna
+    nisi, quis volutpat erat hendrerit non. Nam vulputate dapibus. Paisis, filhis,
+    espiritis santis. N\xE3o sou faixa preta cumpadi, sou preto inteiris, inteiris.\r\n\r\nSi
+    u mundo t\xE1 muito paradis? Toma um m\xE9 que o mundo vai girarzis! Praesent
+    vel viverra nisi. Mauris aliquet nunc non turpis scelerisque, eget. Eu nunca
+    mais boto a boca num copo de cacha\xE7a, agora eu s\xF3 uso canudis! Interagi
+    no m\xE9, cursus quis, vehicula ac nisi."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1327,7 +1330,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &1531822093
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1409,6 +1412,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interfaceObject: {fileID: 1208159259}
+  uiConv: {fileID: 2076096630}
 --- !u!58 &1531822096
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1462,7 +1466,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1683124185
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1538,7 +1542,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1757219218
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1683,7 +1687,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2076096631}
   m_Layer: 0
-  m_Name: CanvasFala
+  m_Name: CanvasFala1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
