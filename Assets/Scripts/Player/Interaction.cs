@@ -7,6 +7,7 @@ public class Interaction : MonoBehaviour
     public GameObject interfaceObject;
     public GameObject uiConv;
     private GameObject player;
+    private Movement movement;
     private bool isPlayerInTrigger = false; 
 
     void Start()
@@ -20,6 +21,10 @@ public class Interaction : MonoBehaviour
         {
             uiConv.SetActive(false); 
         }
+        if(player != null)
+        {
+            movement = player.GetComponent<Movement>();
+        }
     }
 
     void Update()
@@ -30,6 +35,10 @@ public class Interaction : MonoBehaviour
             if (uiConv != null)
             {
                 uiConv.SetActive(true);
+            }
+            if(movement != null)
+            {
+                movement.enabled = false;
             }
         }
     }

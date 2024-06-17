@@ -37,6 +37,14 @@ public class TextSpawning : MonoBehaviour
         }
     }
 
+    void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            TerminarTexto();
+        }
+    }
+
     IEnumerator MaquinaTexto()
     {
         _text.text = iconComecoAntesComeco ? iconComeco : "" ;
